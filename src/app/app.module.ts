@@ -3,16 +3,38 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { CarComponent } from './components/car/car.component';
+import { BrandComponent } from './components/brand/brand.component';
+import { ColorComponent } from './components/color/color.component';
+import { CustomerComponent } from './components/customer/customer.component';
+import { RentalComponent } from './components/rental/rental.component';
+import { NaviComponent } from './components/navi/navi.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule, Routes } from '@angular/router';
+
+const appRoutes: Routes= [
+
+]
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarComponent,
+    BrandComponent,
+    ColorComponent,
+    CustomerComponent,
+    RentalComponent,
+    NaviComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+//forRoot : bizim ayarlarımızı uygulamamızın kullanması için zorunlu kılmış oluyoruz.

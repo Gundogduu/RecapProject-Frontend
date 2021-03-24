@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Routes } from '@angular/router';
+import { CarComponent } from './components/car/car.component';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'recap-project-frontend';
+
 }
